@@ -1,17 +1,17 @@
-#Logging
+# Logging
 
-##基本概念
+## 基本概念
 一段日志内容是通过logRecord对象最终产生，这个对象包含了loggers,handlers,filters,formatters四个部分
-Loggers expose the interface that application code directly uses.
+1. Loggers expose the interface that application code directly uses.
 向应用提供了调用接口
-Handlers send the log records (created by loggers) to the appropriate destination.
+2. Handlers send the log records (created by loggers) to the appropriate destination.
 将日志内容实际输出
-Filters provide a finer grained facility for determining which log records to output.
+3. Filters provide a finer grained facility for determining which log records to output.
 过滤器过滤输出结果
-Formatters specify the layout of log records in the final output.
+4. Formatters specify the layout of log records in the final output.
 对输出内容进行格式化
 
-###logging级别
+### logging级别
 数值越大说明越严重，默认只输出warning级别以上日志。
 
 |级别|数值|
@@ -24,7 +24,7 @@ Formatters specify the layout of log records in the final output.
 |NOTSET | 0 |
 
 
-###模块级方法
+### 模块级方法
 | 方法 |说明|参数或示例|
 |--------|--------|--------|
 |logging.getLogger() |      获取logger对象  | logging.getLogger('a.b')|
@@ -37,7 +37,7 @@ Formatters specify the layout of log records in the final output.
 |logging.error() |||
 |logging.log()|直接进行某级别的日志输出|log(level=logging.info, 'this is info')|
 
-###Logger对象
+### Logger对象
 logger对象应该通过logging.getLogger方法创建，具有相同名称的对象只会被创建一次。logger对象依照名称具有类似python的层级。建议使用`logging.getLogger(__name__)`获取当前模块的logger对象。
 通过logging.getLogger()或者logging.getLogger("")得到root logger实例。
 
@@ -59,7 +59,7 @@ logger对象应该通过logging.getLogger方法创建，具有相同名称的对
 |Logger.findCaller()|返回当前调用的文件名,行号,方法名元组||
 
 
-###Handler对象
+### Handler对象
 这是一个父类，不能直接创建对象，必须使用Handler子类。handler对象定义了基本的方法和属性
 
 | 方法或属性 |说明|参数或示例|
@@ -72,7 +72,7 @@ logger对象应该通过logging.getLogger方法创建，具有相同名称的对
 |Handler.close()|关闭日志输出||
 
 系统在模块`logging.handlers`提供了一些默认的实现
-####handlers实现
+#### handlers实现
 | 类 |说明|参数或示例|
 |--------|--------|--------|
 |StreamHandler|流处理器,支持stdout,stderr,file类对象|参数为file对象，默认为standerr|
@@ -90,7 +90,7 @@ logger对象应该通过logging.getLogger方法创建，具有相同名称的对
 |HTTPHandler|支持通过getpost发送日志到web服务器||
 
 
-###formatter对象
+### formatter对象
 指定了日志输出时的格式，不进行设置时默认的日志格式就只有message部分，就是'%(message)s' 。
 可以在创建format对象时指定格式，也可以创建自己的子类定义格式。一般包括datefmt+msgfmt两部分定义
 
@@ -101,12 +101,12 @@ logger对象应该通过logging.getLogger方法创建，具有相同名称的对
 |fmt.formatTime()|对date部分的格式定义|时间格式参照time模块部分|
 
 
-###filter对象
+### filter对象
 可以为handler和logger提供除级别外更精确的过滤操作。
 可以创建一个指定的fliter对象，也可以创建子类进行示例化。
 
 
-###logrecord对象
+### logrecord对象
 当每次logger对象进行一次日志记录，都会产生一个对应的logrecord对象。
 这个对象包含了一条日志所关联的相关其他附属属性，有些属性可以在format中使用
 
@@ -134,7 +134,7 @@ logger对象应该通过logging.getLogger方法创建，具有相同名称的对
 |msg|||
 
 
-##config，基于配置的日志定义
+## config，基于配置的日志定义
 
 对日志的配置，logging提供了三种模式
 1. Creating loggers, handlers, and formatters explicitly using Python code that calls the configuration methods listed above.
