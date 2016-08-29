@@ -256,7 +256,133 @@ locals()
 
 - max(iterable[, key]) max(arg1, arg2, *args[, key])
 
-- memoryview(obj) 
+- memoryview(obj)
 
-- min(iterable[, key]) min(arg1, arg2, *args[, key]) 
+- min(iterable[, key]) min(arg1, arg2, *args[, key])
+返回迭代对象中最小值，或一组参数中的最小值，key可以用来指定比较方法
+
+- next(iterator[, default])
+获取迭代对象的下一个，如果有default对象当遍历不到时返回，否则抛出StopIteration异常
+
+- oct(x)
+将整型数值转换为8进制显示的字符串
+
+- open(name[, mode[, buffering]])
+打开文件并返回一个文件类型的对象
+
+- ord(c) 
+将只有一个字符串转换为数值，另外参见chr,unichr
+
+- pow(x, y[, z]) 
+进行指数运算，如果只有xy，则等同于x**y。如果有z则相当于(x**y)%z
+
+- print(*objects, sep=' ', end='\n', file=sys.stdout) 
+将对象输出到文件流中
+
+- class property([fget[, fset[, fdel[, doc]]]])
+设置新型类的属性，也可以做为装饰器使用
+```
+class C(object):
+    def __init__(self):
+        self._x = None
+    def getx(self):
+        return self._x
+    def setx(self, value):
+        self._x = value
+    def delx(self):
+        del self._x
+    x = property(getx, setx, delx, "I'm the 'x' property.")
+
+#c.x will invoke the getter, c.x = value will invoke the setter and del c.x the deleter
+```
+
+- range(stop) range(start, stop[, step])
+返回一个数值序列列表
+```
+>>> range(4)
+[0, 1, 2, 3]
+>>> range(-4)
+[]
+>>> range(0,-4)
+[]
+>>> range(0,-4,-1)
+[0, -1, -2, -3]
+>>> range(-4,0)
+[-4, -3, -2, -1]
+>>> range(0,20,4)
+[0, 4, 8, 12, 16]
+```
+
+- raw_input([prompt]) 
+根据提示进行输入，将输入值保存在字符串对象中
+
+- reduce(function, iterable[, initializer]) 
+对迭代对象按递减方式套用方法，另外参见filter,map
+
+- reload(module) 
+重新加载前面加载过的模块，适用于在程序运行过程中修改模块代码再重新导入。
+
+- repr(object) 
+
+
+- reversed(seq)
+将一个序列反转并返回一个迭代对象
+
+- round(number[, ndigits]) 
+对小数部分进行四舍五入操作，返回一个浮点数
+
+- class set([iterable]) 
+根据迭代对象生成一个集合，另外参见frozenset
+
+- setattr(object, name, value) 
+给对象设置属性和属性值
+
+- class slice(stop) class slice(start, stop[, step]) 
+
+
+- sorted(iterable[, cmp[, key[, reverse]]]) 
+根据迭代对象产生一个新的排序的列表
+
+- staticmethod(function) 
+静态方法装饰器
+
+- class str(object='') 
+将一个对象转换为str类型，注意与repr(obj)的区别
+
+- sum(iterable[, start]) 
+将一个迭代对象里的内容合计，如果有传入start则从此位置开始。迭代对象的内容必须是数值型
+
+- super(type[, object-or-type]) 
+
+- tuple([iterable]) 
+将迭代对象转换为元组并保持原来的顺序
+
+- class type(object) class type(name, bases, dict)
+返回一个对象的类型，更推荐使用isinstance
+
+-unichr(i) 
+将一个整型值转换为unicode字符串
+
+- unicode(object='') unicode(object[, encoding[, errors]]) 
+返回一个unicode字符串
+
+- vars([object]) 
+
+- xrange(stop) xrange(start, stop[, step]) 
+功能和range类似，但是返回的是一个迭代对象
+
+- zip([iterable, ...]) 
+将多个迭代对象合并产生一个元组列表。还支持反向解压操作
+```
+>>> x = [1, 2, 3]
+>>> y = [4, 5, 6]
+>>> zipped = zip(x, y)
+>>> zipped
+[(1, 4), (2, 5), (3, 6)]
+>>> x2, y2 = zip(*zipped)
+>>> x == list(x2) and y == list(y2)
+True
+```
+
+- __import__(name[, globals[, locals[, fromlist[, level]]]]) 
 
