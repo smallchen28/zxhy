@@ -240,7 +240,7 @@ file类型的构造方法，和open类似。但推荐使用open，而file用来�
 - class list([iterable]) 
 将一个可迭代对象转换为列表
 
-locals() 
+- locals() 
 将当前本地符号表以字典形式返回
 ```
 >>> locals() 
@@ -281,6 +281,7 @@ locals()
 
 - class property([fget[, fset[, fdel[, doc]]]])
 设置新型类的属性，也可以做为装饰器使用
+
 ```
 class C(object):
     def __init__(self):
@@ -293,7 +294,7 @@ class C(object):
         del self._x
     x = property(getx, setx, delx, "I'm the 'x' property.")
 
-#c.x will invoke the getter, c.x = value will invoke the setter and del c.x the deleter
+# c.x will invoke the getter, c.x = value will invoke the setter and del c.x the deleter
 ```
 
 - range(stop) range(start, stop[, step])
@@ -360,7 +361,7 @@ class C(object):
 - class type(object) class type(name, bases, dict)
 返回一个对象的类型，更推荐使用isinstance
 
--unichr(i) 
+- unichr(i) 
 将一个整型值转换为unicode字符串
 
 - unicode(object='') unicode(object[, encoding[, errors]]) 
