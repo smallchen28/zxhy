@@ -6,3 +6,5 @@
 
 ## 硬件
 
+* [DIY](diy/README.md)
+
