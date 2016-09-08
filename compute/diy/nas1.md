@@ -125,34 +125,46 @@ Gen8优于5028D-TN4T的地方：
 从下单到收货不到两周，下面上开箱图：
 
 美国西海岸发来的箱子
-![package1](https://www.chiphell.com/data/attachment/forum/201508/27/165208wh4vuvkbxncumv4u.jpg)
+
+![package1](./pic/165208wh4vuvkbxncumv4u.jpg)
 
 标签上标明了型号、序列号等信息
-![package2](https://www.chiphell.com/data/attachment/forum/201508/27/165210ieo89z7o7446o39o.jpg)
+
+![package2](./pic/165210ieo89z7o7446o39o.jpg)
 
 打开包装箱，浓浓的工业包装风格
-![package3](https://www.chiphell.com/data/attachment/forum/201508/27/165211x5hhk46sc5y4y286.jpg)
+
+![package3](./pic/165211x5hhk46sc5y4y286.jpg)
 
 主机外观
-![package5](https://www.chiphell.com/data/attachment/forum/201508/27/165213yr18g1yz8wrp8h1z.jpg)
+
+![package4](./pic/165213yr18g1yz8wrp8h1z.jpg)
 
 主机背面，一个标准的12cm风扇；挡板上共有5个网口：1个IPMI，2个千兆，另外2个万兆电口
-![package6](https://www.chiphell.com/data/attachment/forum/201508/27/165214ycutzi7w11w5h3ic.jpg)
 
-主板PCIE插槽，可以见SATA接口
-![package4](https://www.chiphell.com/data/attachment/forum/201508/27/165231kzbe8v8ewlyw85iz.jpg)
-
-4条内存插好了
-![package7](https://www.chiphell.com/data/attachment/forum/201508/27/165233s0yp3ipiy2mh0g13.jpg)
-
-开机了，自检需要1～2分钟
-![package7](https://www.chiphell.com/data/attachment/forum/201508/27/165237zkylgm0f0ng8iik1.jpg)
-
-BIOS显示CPU为Xeon D-1540
-![package8](https://www.chiphell.com/data/attachment/forum/201508/27/165240xzkw1vkxs3kv4nw1.jpg)
+![package5](./pic/165214ycutzi7w11w5h3ic.jpg)
 
 顶视图-机箱顶部的2.5寸SSD位置
-![package9](https://www.chiphell.com/data/attachment/forum/201508/27/165236aw9pdqxdpw6sxx4w.jpg)
+
+![package6](./pic/165236aw9pdqxdpw6sxx4w.jpg)
+
+主板PCIE插槽，可以见SATA接口
+
+![package7](./pic/165231kzbe8v8ewlyw85iz.jpg)
+
+4条内存插好了
+
+![package8](./pic/165233s0yp3ipiy2mh0g13.jpg)
+
+开机了，自检需要1～2分钟
+
+![package9](./pic/165237zkylgm0f0ng8iik1.jpg)
+
+BIOS显示CPU为Xeon D-1540
+
+![package10](./pic/165240xzkw1vkxs3kv4nw1.jpg)
+
+
 
 
 
