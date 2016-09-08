@@ -2,6 +2,7 @@
 
 ## 软件
 
+* [OS](os/README.md)
 * [Python](python/README.md)
 
 ## 硬件
