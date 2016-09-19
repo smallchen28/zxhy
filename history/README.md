@@ -27,6 +27,7 @@
 * [一亿元的小目标和挣脱不了的底层生活](yiyiyuan.md)
 * [钞票是怎么游戏成纸张的？(如松)](chaopiaoshizenme.md)
 * [数据流失是传统银行最大潜在威胁(余丰慧)](shujuliushi.md)
+* [不懂赚钱逻辑，你永远都是社会最底层(水木然)](zhuanqianluoji.md)
 
 
 # 政治
