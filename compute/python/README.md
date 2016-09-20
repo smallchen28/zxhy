@@ -5,7 +5,7 @@
 * [builtintypes内建类型](base/builtintypes.md)
 * [builtinfunctions内建方法](base/builtinfunctions.md)
 * [exceptions异常处理](base/exceptions.md)
-* [itertools模块]
+* [itertools模块](base/itertools.md)
 * [logging模块](base/logging.md)
 * [subprocess模块](base/subprocess.md)
 * [argparse模块](base/argsparse.md)
@@ -18,15 +18,20 @@
 
 ## 开发者工具
 
-* 文档化
-* 测试
-* 调试
-* 性能
-
-## 第三方工具
+### 环境搭建
 
 * pip
 * virtualenv
+
+### 文档化
+
+### 测试
+
+### 调试
+
+### 性能
+
+### 第三方工具
 
 ## 库和框架
 
