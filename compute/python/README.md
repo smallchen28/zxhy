@@ -39,6 +39,7 @@
 
 * [blinker](modules/blinker.md)
 * bottle
+* [openstack-cliff](modules/cliff.md)
 * fabric
 * flask
 * greenlet
