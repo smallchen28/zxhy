@@ -28,7 +28,7 @@
 * [钞票是怎么游戏成纸张的？(如松)](chaopiaoshizenme.md)
 * [数据流失是传统银行最大潜在威胁(余丰慧)](shujuliushi.md)
 * [不懂赚钱逻辑，你永远都是社会最底层(水木然)](zhuanqianluoji.md)
-
+* [闲聊财富](xianliaocaifu.md)
 
 # 政治
 
