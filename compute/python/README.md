@@ -9,6 +9,8 @@
 * [logging模块](base/logging.md)
 * [subprocess模块](base/subprocess.md)
 * [argparse模块](base/argsparse.md)
+* [json模块](base/json.md)
+* [wsgiref模块](base/wsgiref.md)
 
 ## 进阶知识
 
