@@ -24,7 +24,7 @@
 
 ### 环境搭建
 
-* pip
+* [pip包安装工具](tools/pip.md)
 * virtualenv
 
 ### 文档化
