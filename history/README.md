@@ -14,8 +14,6 @@
 1. 世界的一千零一天
 
 
-# 经济
-
 ## 文摘
 
 * [泡沫的脉络和将要撞击的冰山(如松)](pmdmlhjyzjdbs.md)
@@ -29,8 +27,6 @@
 * [数据流失是传统银行最大潜在威胁(余丰慧)](shujuliushi.md)
 * [不懂赚钱逻辑，你永远都是社会最底层(水木然)](zhuanqianluoji.md)
 * [闲聊财富](xianliaocaifu.md)
+* [现代文明就是公民社会](xiandaiwenming.md)
 
-# 政治
-
-## 文摘
 
