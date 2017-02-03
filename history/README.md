@@ -28,5 +28,6 @@
 * [不懂赚钱逻辑，你永远都是社会最底层(水木然)](zhuanqianluoji.md)
 * [闲聊财富](xianliaocaifu.md)
 * [现代文明就是公民社会](xiandaiwenming.md)
+* [从物质中获得幸福的时代已经结束(本田直之)](shaojishiduo.md)
 
 
