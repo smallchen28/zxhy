@@ -27,7 +27,9 @@
 * [数据流失是传统银行最大潜在威胁(余丰慧)](shujuliushi.md)
 * [不懂赚钱逻辑，你永远都是社会最底层(水木然)](zhuanqianluoji.md)
 * [闲聊财富](xianliaocaifu.md)
-* [现代文明就是公民社会](xiandaiwenming.md)
+* [现代文明就是公民社会(徐斌)](xiandaiwenming.md)
+* [汉族是儒家文明焚烧殆尽后的灰烬(徐斌)](hanzu.md)
+* [权力来自于对秩序的认同(徐斌)](quanlilaizizhixu.md)
 * [从物质中获得幸福的时代已经结束(本田直之)](shaojishiduo.md)
 
 
