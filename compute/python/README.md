@@ -9,6 +9,7 @@
 * [logging模块](base/logging.md)
 * [subprocess模块](base/subprocess.md)
 * [argparse模块](base/argsparse.md)
+* [configparser模块](base/configparser.md)
 * [json模块](base/json.md)
 * [wsgiref模块](base/wsgiref.md)
 
@@ -25,27 +26,27 @@
 ### 环境搭建
 
 * [pip包安装工具](tools/pip.md)
+* [tox测试环境工具](tools/tox.md)
 * virtualenv
 
 ### 文档化
 
 ### 测试
 
-### 调试
+### 调试与性能
 
-### 性能
-
-### 第三方工具
-
-## 库和框架
+## 第三方工具/库和框架
 
 * [blinker](modules/blinker.md)
 * bottle
-* [openstack-cliff](modules/cliff.md)
 * fabric
+* [falcon](modules/falcon.md)
 * flask
 * greenlet
 * numpy
+* [openstack-cliff](modules/cliff.md)
+* [openstack-oslo.config](modules/oslo.config.md)
+* [openstack-oslo.log](modules/oslo.log.md)
 * pelican
 * scrapy
 * six
