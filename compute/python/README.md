@@ -12,6 +12,7 @@
 * [configparser模块](base/configparser.md)
 * [json模块](base/json.md)
 * [wsgiref模块](base/wsgiref.md)
+* [unittest模块](base/unittest.md)
 
 ## 进阶知识
 
@@ -32,6 +33,9 @@
 ### 文档化
 
 ### 测试
+
+* [测试框架总结]
+* [testtools](modules/testtools.md)
 
 ### 调试与性能
 
