@@ -26,9 +26,12 @@
 
 ### 环境搭建
 
+* [pelican静态网站生成工具](tools/pelican.md)
 * [pip包安装工具](tools/pip.md)
+* [scrapy爬虫框架](tools/scrapy.md)
 * [tox测试环境工具](tools/tox.md)
-* virtualenv
+* [virtualenv虚拟化环境](tools/virtualenv.md)
+
 
 ### 文档化
 
@@ -44,7 +47,7 @@
 
 ### 调试与性能
 
-## 第三方工具/库和框架
+## 第三方库和开发框架
 
 * [blinker](modules/blinker.md)
 * bottle
@@ -56,8 +59,6 @@
 * [openstack-cliff](modules/cliff.md)
 * [openstack-oslo.config](modules/oslo.config.md)
 * [openstack-oslo.log](modules/oslo.log.md)
-* pelican
-* scrapy
 * six
 
 ## 一些网站
