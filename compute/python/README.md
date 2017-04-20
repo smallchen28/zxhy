@@ -26,6 +26,7 @@
 
 ### 环境搭建
 
+* [clustershell集群管理框架](tools/clustershell.md)
 * [pelican静态网站生成工具](tools/pelican.md)
 * [pip包安装工具](tools/pip.md)
 * [scrapy爬虫框架](tools/scrapy.md)
