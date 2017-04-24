@@ -1,14 +1,8 @@
-docker基本使用
+# docker基本使用
 
-## 简介
+## docker安装
 
-### docker版本
-
-从2017开始docker开始区分社区版本CE和企业版EE，企业版增加了安全性和可管理特性。一般使用仍可使用CE版。
-
-支持比较好的操作系统包括CENTOS/UBUNTU。本文档基于CENTOS，docker1.12
-
-### docker安装
+### linux平台
 
 在centos7上直接通过yum安装。
 ```
@@ -36,6 +30,10 @@ Server:
  OS/Arch:         linux/amd64
 ```
 
+### windows平台
+
+### MacOS平台
+
 ## 基础命令
 
 ### 启动第一个容器
@@ -47,7 +45,7 @@ Unable to find image 'centos:latest' locally
 Trying to pull repository docker.io/library/centos ... 
 latest: Pulling from docker.io/library/centos
 Digest: sha256:4eda692c08e0a065ae91d74e82fff4af3da307b4341ad61fa61771cc4659af60
-# 进入了容器的的sh
+# 启动了一个新容器并进入了容器的的sh
 [root@46c7fc0f9c40 /]# 
 [root@46c7fc0f9c40 /]# ls
 anaconda-post.log  bin  dev  etc  home  lib  lib64  lost+found  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
@@ -131,7 +129,7 @@ Untagged: daocloud.io/centos@sha256:80aa348201b7f4e4d68e68c5ef97f875473b035b1f96
 
 #### docker ps 列出容器
 
-支持选项-l显示最后创建的容器，-a显示所有容器。默认只显示运行的。-s显示所有文件大小。
+支持选项-l显示最后创建的容器，-a显示所有容器(默认只显示运行的)。-s显示所有文件大小。
 
 示例
 ```
@@ -229,6 +227,17 @@ Options:
 
 #### docker run 在新容器中运行命令
 
+常用参数包括-d后台运行模式，-i交互式运行模式，-t分配伪终端并绑定到容器的STDIN，-p指定端口绑定，-v指定卷挂载。
+--name指定名称，--sysctl选项
+
+使用示例
+```
+# 交互模式启动
+$ docker run -it ubuntu:14.04 /bin/bash
+# 指定端口绑定，并且在容器启动后台SSHD服务
+$ sudo docker run -d -p 10.211.55.4:9999:22 birdben/ubuntu:v1 '/usr/sbin/sshd' -D
+```
+
 #### docker attach 
 
 命令帮助
@@ -260,6 +269,11 @@ Copy files/folders between a container and the local filesystem
 Options:
   -L, --follow-link   Always follow symbol link in SRC_PATH
       --help          Print usage
+```
+
+使用示例
+```
+
 ```
 
 #### docker exec 在容器中执行另外的命令
