@@ -5,7 +5,7 @@
 * [amazon]
 * [openshift]
 
-## 虚拟机技术
+## 虚拟机
 
 * [qemukvm的网络配置](virtualization/qemukvmnet.md)
 

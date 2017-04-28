@@ -1,8 +1,8 @@
-# docker基本使用
+# Docker基本使用
 
-## docker安装
+## Docker安装
 
-### linux平台
+### Linux平台
 
 在centos7上直接通过yum安装。
 ```
@@ -30,9 +30,30 @@ Server:
  OS/Arch:         linux/amd64
 ```
 
-### windows平台
+### Windows平台
 
 ### MacOS平台
+
+### 使用镜像加速器
+
+通常从国内访问下载docker镜像会比较慢或失败。因此国内有些厂商提供了镜像加速器，可以从国内网络下载镜像。
+
+常见的服务包括[阿里](https://cr.console.aliyun.com/#/accelerator),[daocloud](https://www.daocloud.io/mirror#accelerator-doc),[灵雀云](http://docs.alauda.cn/feature/accelerator.html)。
+
+注册用户后会获得如 https://jxus37ad.mirror.aliyuncs.com 这样的地址。我们需要将其配置给 Docker 引擎。
+
+对于使用 systemd 的系统，用 systemctl enable docker 启用服务后，编辑 /etc/systemd/system/multi-user.target.wants/docker.service 文件，找到 ExecStart= 这一行，在这行最后添加加速器地址 --registry-mirror=<加速器地址>，如：
+
+```
+ExecStart=/usr/bin/dockerd --registry-mirror=https://jxus37ad.mirror.aliyuncs.com
+# 重启服务
+$ sudo systemctl daemon-reload
+$ sudo systemctl restart docker
+# 检查是否生效
+$ sudo ps -ef | grep dockerd
+root      5346     1  0 19:03 ?        00:00:00 /usr/bin/dockerd --registry-mirror=https://jxus37ad.mirror.aliyuncs.com
+$
+```
 
 ## 基础命令
 
@@ -273,7 +294,17 @@ Options:
 
 使用示例
 ```
-
+[root@VMCentOS7Lyx ~]# docker cp mysqltest:/var/log/mysql/error.log ./
+[root@VMCentOS7Lyx ~]# tail -10 error.log 
+2017-04-11T22:42:26.862176Z 0 [Note] Shutting down plugin 'MRG_MYISAM'
+2017-04-11T22:42:26.862181Z 0 [Note] Shutting down plugin 'MyISAM'
+2017-04-11T22:42:26.862189Z 0 [Note] Shutting down plugin 'CSV'
+2017-04-11T22:42:26.862193Z 0 [Note] Shutting down plugin 'MEMORY'
+2017-04-11T22:42:26.862196Z 0 [Note] Shutting down plugin 'PERFORMANCE_SCHEMA'
+2017-04-11T22:42:26.862216Z 0 [Note] Shutting down plugin 'sha256_password'
+2017-04-11T22:42:26.862220Z 0 [Note] Shutting down plugin 'mysql_native_password'
+2017-04-11T22:42:26.862361Z 0 [Note] Shutting down plugin 'binlog'
+2017-04-11T22:42:26.862637Z 0 [Note] mysqld: Shutdown complete
 ```
 
 #### docker exec 在容器中执行另外的命令
