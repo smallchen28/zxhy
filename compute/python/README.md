@@ -64,5 +64,5 @@
 
 ## 一些网站
 
-
+* [Python资源大全](advanced/awesome-python-cn.md)
 
