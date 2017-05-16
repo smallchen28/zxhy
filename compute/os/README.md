@@ -2,11 +2,10 @@
 
 ## LINUX
 
-* [aria2](aria2.md)
-* [corkscrew](corkscrew.md)
-* [grub](grub.md)
-* [tmux](tmux.md)
-
+* [aria2](linux/aria2.md)
+* [corkscrew](linux/corkscrew.md)
+* [grub](linux/grub.md)
+* [tmux](linux/tmux.md)
 
 ## Zephyr
 
