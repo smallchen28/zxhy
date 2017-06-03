@@ -8,5 +8,6 @@
 
 ## 硬件
 
-* [DIY](diy/README.md)
+* [DIY](hardware/README.md)
+* [AI](ai/README.md)
 
