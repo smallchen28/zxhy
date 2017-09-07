@@ -20,7 +20,7 @@
 * [迭代器与生成器](advanced/iterator.md)
 * [装饰器](advanced/decorator.md)
 * [命名空间与作用域](http://python.jobbole.com/81367/)
-* [线程，进程和协程]
+* [线程，进程，同步和协程](advanced/multithread.md)
 
 ## 开发者工具
 

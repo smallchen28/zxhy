@@ -345,13 +345,14 @@ Queue 模块实现了多生产者、多消费者队列。它特别适用于信�
 示例代码
 
 ```
+q = Queue()
+
 def worker():
     while True:
         item = q.get()
         do_work(item)
         q.task_done()
 
-q = Queue()
 for i in range(num_worker_threads):
      t = Thread(target=worker)
      t.daemon = True
