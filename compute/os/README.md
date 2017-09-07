@@ -6,6 +6,7 @@
 * [corkscrew](linux/corkscrew.md)
 * [grub](linux/grub.md)
 * [tmux](linux/tmux.md)
+* [rpm](linux/rpm_rpmbuild.md)
 
 ## Zephyr
 
