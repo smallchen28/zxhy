@@ -11,6 +11,7 @@
 ## 硬件
 
 * [DIY](hardware/README.md)
+* [物联网](iot/README.md)
 * [人工智能AI](ai/README.md)
-* [数字区块链](blockchain/README.md)
+* [数字货币与区块链](blockchain/README.md)
 
