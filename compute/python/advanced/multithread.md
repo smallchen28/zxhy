@@ -104,14 +104,21 @@ all done @ Sat Sep  2 11:28:47 2017
 |对象|说明|
 |--------|--------|
 |Thread|表示一个执行线程的对象|
-|Lock| 锁原语对象|
-|RLock| 可重入锁对象 |
+|Lock  | 锁原语对象|
+|RLock | 可重入锁对象 |
 |Condition| 条件变量对象，使得一个线程等待另一个线程满足特定条件 |
-|Event| 条件变量的通用版|
+|Event | 条件变量的通用版|
 |Semaphore| 资源上的信号量，没有可用资源时会被阻塞 |
 |BoundedSemaphore| 有界信号量 |
-|Timer| 与Thread相似，要在运行前等待一段时间|
+|Timer | 与Thread相似，要在运行前等待一段时间|
 |Barrier| 创建一个障碍，必须达到指定数量的线程后才开始(python3.2引入)|
+|模块级方法||
+|active_count()|返回当前存在的Thread对象的个数|
+|activeCount()||
+|current_thread()|返回当前的Thread对象，对应于调用者控制的线程|
+|currentThread()||
+|enumerate()|返回当前活着的Thread对象的列表，该列表包括守护线程|
+|local()|创建一个本线程local对象，用来存储本线程内部数据|
 
 ### Thread类
 
@@ -281,6 +288,84 @@ remaining:None
 |release()| 计数器加一 |
 |class threading.BoundedSemaphore(value)| 有边界的信号量，释放超过边界时抛出ValueError |
 
+示例代码
+```
+def run(n):
+    semaphore.acquire()
+    time.sleep(1)
+    print("run the thread: %s\n" %n)
+    semaphore.release()
+
+if __name__ == '__main__':
+    semaphore = threading.BoundedSemaphore(5)  # 最多允许5个线程同时运行
+    for i in range(22):
+        t = threading.Thread(target=run, args=(i,))
+        t.start()
+
+    while threading.active_count() != 1:
+        pass
+    else:
+        print('---all threads done---')
+```
+
+### Event对象
+
+一个事件的触发等待这个事件的线程开始。每个事件对象内部维护一个布尔属性。通过clean/set方法改变这个标记。
+
+当某个线程等待wait这个事件对象时，线程将阻塞直到事件对象的内部标志被设为true。
+
+|方法|说明|
+|--------|--------|
+|class threading.Event|事件对象|
+|is_set()| 是否标记为真 |
+|set()| 设置标记为真|
+|clear()| 清除标记,置为false |
+|wait([timeout])| 等待|
+
+这个可以用来控制一组线程基于某个事件开始。例如汽车等待绿灯信号。
+
+```
+def car1(name, event):
+    event.wait()
+    print("%s gogogo" % name)
+    time.sleep(3)
+    print("%s finished" % name)
+
+def car2(name, event):
+    event.wait()
+    print("%s gogogo" % name)
+    time.sleep(5)
+    print("%s finished" % name)
+
+if __name__ == '__main__':
+    startevent = threading.Event()
+    startevent.clear()
+
+    car1 = threading.Thread(target=car1, args=("Ford", startevent))
+    car2 = threading.Thread(target=car2, args=("Jeep", startevent))
+
+    car1.start()
+    car2.start()
+
+    for i in [3, 2, 1]:
+        time.sleep(1)
+        print("being %d ......" % i)
+
+    startevent.set()
+    car1.join()
+    car2.join()
+
+# 执行结果
+being 3 ......
+being 2 ......
+being 1 ......
+Ford gogogo
+Jeep gogogo
+Ford finished
+Jeep finished	
+```
+
+
 ### Timer对象
 
 这个计时器类表示一个线程在指定时间间隔后开始执行函数。Timer是Thread的子类，可以自定义。
@@ -322,7 +407,7 @@ Queue 模块实现了多生产者、多消费者队列。它特别适用于信�
 
 |类和异常|说明|
 |--------|--------|
-| class Queue.Queue(maxsize=0)| 构造一个FIFO队列。maxsize是个整数，指明了队列中能存放的数据个数的上限。maxsize小于或者等于0，队列大小没有限制。|
+|class Queue.Queue(maxsize=0)| 构造一个FIFO队列。maxsize是个整数，指明了队列中能存放的数据个数的上限。maxsize小于或者等于0，队列大小没有限制。|
 |class Queue.LifoQueue(maxsize=0)| 构造一个LIFO队列。后入先出队列，当队列没有空间时插入会被阻塞。 |
 |class Queue.PriorityQueue(maxsize=0)| 构造一个优先队列。|
 |exception Queue.Empty| 当对空队列调用get方法时抛出异常。|
@@ -362,6 +447,21 @@ for item in source():
     q.put(item)
 
 q.join()
+```
+
+再看一个具有优先级的队列示例
+
+```
+import queue
+
+q = queue.PriorityQueue()
+
+q.put((5, 'a'))
+q.put((7, 'b'))
+q.put((2, 'c')) # 数字越小的，优先级越高
+print(q.get())  # (2, 'c')
+print(q.get())  # (5, 'a')
+print(q.get())  # (7, 'b')
 ```
 
 # 更多解决方案
