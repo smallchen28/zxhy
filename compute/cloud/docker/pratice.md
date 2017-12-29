@@ -91,4 +91,4 @@ access control disabled, clients can connect from any host
 
 参数“+”表示允许任意来源的用户。再次运行前面的docker run命令，就会看到firefox启动起来了，速度相当快。由于是直接共享了X11的unix套接字，在效率上与运行安装在主机上的程序基本没有差异。
 
-![firefox](./pic/image2016-12-13 14-31-33.png)
+![firefox](./pic/image2016-12-13-14-31-33.png)
