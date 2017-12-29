@@ -8,7 +8,7 @@
 WSGI不是web服务器，也不是用于与程序交互的API，而只是定义的一个接口规范。
 其目标是在web服务器和web框架层之间提供一个通用的API标准，减少之间的互操作性并形成统一的调用方式。
 
-几个重要的规范参考PEP333,PEP3333,PEP444
+几个重要的规范参考PEP333,PEP3333,PEP444, [WSGI官方网站](http://www.wsgi.org)
 
 ### WSGI服务器
 
@@ -29,7 +29,7 @@ httpd.serve_forever()
 
 ### APP应用
 
-根据WSGI定义，其应用是一个可调用对象(python中的方法？)。
+根据WSGI定义，其应用是一个可调用对象(python中的callable()?)
 
  - 一个app示例
  
