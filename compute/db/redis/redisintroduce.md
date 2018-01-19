@@ -32,7 +32,7 @@ Redis当前支持的数据类型包括：string,hash,list,set,zset(sorted set),b
 
 ### keys关键字
 
-Redis中的关键字是二进制安全的，这意味着你可以使用任意二进制序列作为关键字，例如字符串或一个JPEG图片内容或空字符串。
+Redis中的关键字是二进制安全的，这意味着你可以使用任意二进制序列作为关键字，例如字符串或一个JPEG图片内容或空字符串，空字符串也可以关键字。
 
 关于key的几个原则:
 
@@ -50,7 +50,7 @@ Redis中的关键字是二进制安全的，这意味着你可以使用任意二
 
 hash类型代表了一系列的键值对，非常适合于表达一个对象objects，这个对象的属性作为键值对存储。
 
-Redis中对小规模的hashmap进行了优化，以特殊方式编码以优化内存占用
+聚合类型当插入元素时，如果目标键不存在会创建一个空的聚合类型。当所有元素被移除时，键自动被销毁。
 
 ### List列表
 
@@ -68,9 +68,9 @@ Redis集合有着不允许相同成员存在的优秀特性。向集合中多次
 
 ### zset有序集合
 
-Redis有序集合和Redis集合类似，是不包含 相同字符串的合集。
+Redis有序集合和Redis集合类似，是不包含相同字符串的合集。
 
-每个有序集合的成员都关联着一个评分，这个评分用于把有序集 合中的成员按最低分到最高分排列。
+每个有序集合的成员都关联着一个评分(可以是浮点数)，这个评分用于把有序集合中的成员按最低分到最高分排列。
 
 ## 基本命令
 
@@ -89,6 +89,7 @@ Redis命令十分丰富，包括的命令组有Cluster、Connection、Geo、Hash
 |renamenx key nkey| 重命令一个key       |
 |expire key sec | 根据键设置按秒过期    |
 |expireat key ts| 根据键设置按时间戳过期|
+|persist key    | 移除键的过期设置      |
 |pexpire key ms | 根据键设置按毫秒过期  |
 |pexpireat key mts| 根据键设置过期      |
 |ttl key        | 获取key的有效秒数     |
@@ -133,6 +134,16 @@ string
 (integer) -2
 127.0.0.1:6379> exists key0
 (integer) 0
+127.0.0.1:6379> set key1 hello
+OK
+127.0.0.1:6379> expire key1 20
+(integer) 1
+127.0.0.1:6379> ttl key1 
+(integer) 16
+127.0.0.1:6379> persist key1
+(integer) 1
+127.0.0.1:6379> ttl key1
+(integer) -1
 ```
 
 ### strings
