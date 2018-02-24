@@ -5,8 +5,9 @@
 * [amazon]
 * [openshift]
 
-## 虚拟机
+## 虚拟化基础
 
+* [从云到雾](virtualization/congyundaowu.md)
 * [qemukvm的网络配置](virtualization/qemukvmnet.md)
 
 ## openstack
