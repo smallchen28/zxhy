@@ -31,6 +31,6 @@
 * [汉族是儒家文明焚烧殆尽后的灰烬(徐斌)](hanzu.md)
 * [权力来自于对秩序的认同(徐斌)](quanlilaizizhixu.md)
 * [从物质中获得幸福的时代已经结束(本田直之)](shaojishiduo.md)
-* [发展，从投资驱动到创新驱动](汪丁丁)(chuangxinqudong.md)
-* [人生发财靠康波](投行大师兄)(renshengfacaikaokangbo.md)
-
+* [发展，从投资驱动到创新驱动(汪丁丁)](chuangxinqudong.md)
+* [人生发财靠康波(投行大师兄)](renshengfacaikaokangbo.md)
+* [赵构为什么要杀岳飞？(卢麒元)](zhaogoushayuefei.md)
