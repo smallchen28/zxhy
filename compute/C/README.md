@@ -6,9 +6,11 @@
 
 ## 开发者工具
 
-* [git使用](git/README.md)
+* [git使用](tools/git/README.md)
 
 ### 编译链接
+
+* [make教程](tools/makefile.md)
 
 ### 文档化
 
