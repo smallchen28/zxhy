@@ -34,3 +34,4 @@
 * [发展，从投资驱动到创新驱动(汪丁丁)](chuangxinqudong.md)
 * [人生发财靠康波(投行大师兄)](renshengfacaikaokangbo.md)
 * [赵构为什么要杀岳飞？(卢麒元)](zhaogoushayuefei.md)
+* [威廉二世的教训？(卢麒元)](weilianershi.md)
