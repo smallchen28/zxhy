@@ -35,3 +35,4 @@
 * [人生发财靠康波(投行大师兄)](renshengfacaikaokangbo.md)
 * [赵构为什么要杀岳飞？(卢麒元)](zhaogoushayuefei.md)
 * [威廉二世的教训？(卢麒元)](weilianershi.md)
+* [智人的黄昏](zhirendehuanghun.md)
